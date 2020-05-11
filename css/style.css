@@ -2,6 +2,7 @@
 @import url(lilac.css);
 @import url(custom-color.css);
 @import url(owl.transitions.css);
+
 a:focus {
     outline: 0
 }
@@ -168,7 +169,7 @@ textarea {
 
 #preloader>div.heartbeat:not(:required):after,
 #preloader>div.heartbeat:not(:required):before {
-    background: #ad9fb3!important
+    background: #ad9fb3 !important
 }
 
 @-webkit-keyframes heartbeat {
@@ -182,6 +183,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     14% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -192,6 +194,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     28% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -202,6 +205,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     42% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -212,6 +216,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     70% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -235,6 +240,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     14% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -245,6 +251,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     28% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -255,6 +262,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     42% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -265,6 +273,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     70% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -288,6 +297,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     14% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -298,6 +308,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     28% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -308,6 +319,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     42% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -318,6 +330,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     70% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -341,6 +354,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     14% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -351,6 +365,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     28% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -361,6 +376,7 @@ textarea {
         -moz-opacity: .7;
         opacity: .7
     }
+
     42% {
         -webkit-transform: rotate(45deg) scale(1.3);
         -moz-transform: rotate(45deg) scale(1.3);
@@ -371,6 +387,7 @@ textarea {
         -moz-opacity: .85;
         opacity: .85
     }
+
     70% {
         -webkit-transform: rotate(45deg) scale(1);
         -moz-transform: rotate(45deg) scale(1);
@@ -533,7 +550,7 @@ h2.section-title {
 
 .section-desc {
     clear: both;
-    margin-bottom: 40px!important;
+    margin-bottom: 40px !important;
     text-align: center
 }
 
@@ -602,7 +619,7 @@ h2.section-title {
 .btn.active,
 .btn:active {
     background-image: none;
-    outline: 0!important;
+    outline: 0 !important;
     box-shadow: none
 }
 
@@ -742,9 +759,9 @@ fieldset[disabled] .btn-color:hover {
 .btn-danger:focus,
 .btn-danger:hover,
 .btn-danger[disabled] {
-    color: #fff!important;
-    background-color: #da4f49!important;
-    border-color: inherit!important
+    color: #fff !important;
+    background-color: #da4f49 !important;
+    border-color: inherit !important
 }
 
 .btn-success,
@@ -754,9 +771,9 @@ fieldset[disabled] .btn-color:hover {
 .btn-success:focus,
 .btn-success:hover,
 .btn-success[disabled] {
-    color: #fff!important;
-    background-color: #5bb75b!important;
-    border-color: inherit!important
+    color: #fff !important;
+    background-color: #5bb75b !important;
+    border-color: inherit !important
 }
 
 .btn.ribbon {
@@ -778,11 +795,11 @@ fieldset[disabled] .btn-color:hover {
     position: absolute;
     bottom: -12px;
     z-index: -1;
-    font-family: lilac!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
+    font-family: lilac !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -1202,7 +1219,7 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .divider-bottom-1 {
-    padding-bottom: 290px!important
+    padding-bottom: 290px !important
 }
 
 .divider-bottom-1::after {
@@ -1286,11 +1303,11 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .divider-top-1.bg-color-overlay::before {
-    height: 100%!important
+    height: 100% !important
 }
 
 .divider-top-2 {
-    padding-top: 240px!important
+    padding-top: 240px !important
 }
 
 .divider-top-2::before {
@@ -1685,11 +1702,11 @@ fieldset[disabled] .btn.ribbon:hover {
 
 .hero-title span:first-child:before {
     content: "c";
-    font-family: lilac!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
+    font-family: lilac !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -1701,11 +1718,11 @@ fieldset[disabled] .btn.ribbon:hover {
 
 .hero-title span:last-child:after {
     content: "d";
-    font-family: lilac!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
+    font-family: lilac !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -1967,7 +1984,7 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .story-elem .image .hover-info .sn-icons a {
-    color: #fff!important;
+    color: #fff !important;
     border-color: #fff
 }
 
@@ -2167,11 +2184,11 @@ fieldset[disabled] .btn.ribbon:hover {
     position: absolute;
     bottom: -13px;
     z-index: -1;
-    font-family: lilac!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
+    font-family: lilac !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -3044,11 +3061,11 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .gallery-desc {
-    color: rgba(255, 255, 255, .7)!important
+    color: rgba(255, 255, 255, .7) !important
 }
 
 .gallery-desc strong {
-    color: #fff!important
+    color: #fff !important
 }
 
 .gallery-wrapper {
@@ -3443,11 +3460,11 @@ fieldset[disabled] .btn.ribbon:hover {
     bottom: -13px;
     right: -38px;
     z-index: -1;
-    font-family: lilac!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
+    font-family: lilac !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
     speak: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -3628,8 +3645,8 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .blog-accordion.panel-group {
-    border: none!important;
-    margin-bottom: 0!important
+    border: none !important;
+    margin-bottom: 0 !important
 }
 
 .blog-accordion.panel-group .panel {
@@ -3642,7 +3659,7 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .blog-accordion.panel-group .panel .panel-heading .panel-title>a {
-    background-color: transparent!important
+    background-color: transparent !important
 }
 
 .blog-accordion.panel-group .panel .panel-heading .panel-title>a:focus,
@@ -3651,12 +3668,12 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .blog-accordion.panel-group .panel .panel-heading .panel-title>a:after {
-    display: none!important
+    display: none !important
 }
 
 .blog-accordion.panel-group .panel .panel-heading+.panel-collapse.collapsing .panel-body,
 .blog-accordion.panel-group .panel .panel-heading+.panel-collapse.in .panel-body {
-    background-color: transparent!important
+    background-color: transparent !important
 }
 
 .blog-accordion.panel-group .panel .panel-body {
@@ -3989,7 +4006,7 @@ fieldset[disabled] .btn.ribbon:hover {
     padding-left: 20px;
     border-left: 1px solid #e3e3e3;
     color: #adb2b6;
-    margin: 8px 0!important
+    margin: 8px 0 !important
 }
 
 .share-wrapper .print-button:hover {
@@ -4409,7 +4426,7 @@ textarea.form-control {
     top: 25%;
     left: 0;
     height: 50%;
-    border-left: 1px solid rgba(173, 159, 179, .5)!important
+    border-left: 1px solid rgba(173, 159, 179, .5) !important
 }
 
 .btn .line_above {
@@ -4579,7 +4596,7 @@ textarea.form-control {
 
 .bg-color .add_list .input-group-addon::after,
 .bg-color-overlay .add_list .input-group-addon::after {
-    border-left: 1px solid rgba(255, 255, 255, .5)!important
+    border-left: 1px solid rgba(255, 255, 255, .5) !important
 }
 
 .bg-color .btn .line_above,
@@ -4599,7 +4616,7 @@ textarea.form-control {
 }
 
 .invalid {
-    border-color: #db2020!important
+    border-color: #db2020 !important
 }
 
 #footer {
@@ -4698,7 +4715,7 @@ textarea.form-control {
 
 .bg-color .sn-icons a,
 .bg-color-overlay .sn-icons a {
-    color: #fff!important;
+    color: #fff !important;
     border-color: #fff
 }
 
@@ -4961,7 +4978,7 @@ a.pp_arrow_previous {
 
 .pp_gallery .pp_arrow_next,
 .pp_gallery .pp_arrow_previous {
-    margin-top: 7px!important
+    margin-top: 7px !important
 }
 
 a.pp_next,
@@ -5072,7 +5089,7 @@ a.pp_close {
 }
 
 #pp_full_res {
-    line-height: 1!important
+    line-height: 1 !important
 }
 
 #pp_full_res .pp_inline {
@@ -5093,7 +5110,7 @@ div.ppt {
 
 div.lilac .pp_gallery a.pp_arrow_next,
 div.lilac .pp_gallery a.pp_arrow_previous {
-    margin-top: 8px!important
+    margin-top: 8px !important
 }
 
 div.dark_square #pp_full_res .pp_inline,
@@ -5222,11 +5239,13 @@ div.lilac .currentTextHolder {
 }
 
 @media (min-width:768px) and (max-width:1199px) {
+
     .location-info .event_left .event_panel .info-left,
     .location-info .event_right .event_panel .info-left {
         width: 100%;
         margin-bottom: 15px
     }
+
     .location-info .event_left .event_panel .info-right,
     .location-info .event_right .event_panel .info-right {
         width: 100%;
@@ -5240,17 +5259,21 @@ div.lilac .currentTextHolder {
     .hero-title {
         font-size: 70pt
     }
+
     .hero-title span:first-child:before {
         left: -98px;
         top: -30px
     }
+
     .hero-title span:last-child:after {
         right: -98px;
         top: -30px
     }
+
     .hero-subtitle {
         font-size: 46pt
     }
+
     .blog-bottom-info>ul {
         width: 100%;
         border-right: none
@@ -5261,53 +5284,65 @@ div.lilac .currentTextHolder {
     .nav {
         display: none
     }
+
     #nav-mobile-btn {
         display: block
     }
+
     .hero-title {
         font-size: 60pt;
         margin-bottom: 50px
     }
+
     .hero-title span:first-child:before {
         left: -82px;
         top: -24px
     }
+
     .hero-title span:last-child:after {
         right: -82px;
         top: -24px
     }
+
     .hero-subtitle {
         font-size: 38pt;
         margin-top: 40px
     }
+
     .balloon-left,
     .balloon-right {
         padding: 40px 30px;
         font-size: 30pt;
         left: -40px
     }
+
     .balloon-right {
         left: auto;
         right: -40px
     }
+
     .invite .invite_authors,
     .invite .invite_info {
         width: 100%;
         padding: 0
     }
+
     .invite .invite_info {
         border: none;
         margin-top: 40px
     }
+
     #footer {
         text-align: center
     }
+
     #footer .sn-icons {
         float: none
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
+
     .comments h3 .icon,
     .form-wrap .btn[type=submit] .icon {
         display: none
@@ -5318,80 +5353,100 @@ div.lilac .currentTextHolder {
     .hero-title {
         font-size: 50pt
     }
+
     .hero-title span:first-child:before {
         left: -70px;
         top: -20px
     }
+
     .hero-title span:last-child:after {
         right: -70px;
         top: -20px
     }
+
     .hero-subtitle {
         font-size: 30pt
     }
+
     .countdown>div>div {
         font-size: 46pt
     }
+
     .balloon-left,
     .balloon-right {
         left: 8px
     }
+
     .balloon-right {
         left: auto;
         right: -4px
     }
+
     .quote-fullwidth {
         font-size: 28pt
     }
+
     .timeline .event_left,
     .timeline .event_right {
         width: 100%;
         padding: 0 15px
     }
+
     .timeline .event_left::after,
     .timeline .event_left::before,
     .timeline .event_right::after,
     .timeline .event_right::before {
         display: none
     }
+
     .timeline .event_left .event_panel,
     .timeline .event_right .event_panel {
         margin: 0
     }
+
     .timeline .event_left .event_panel::before,
     .timeline .event_right .event_panel::before {
         display: none
     }
+
     .wedding-gifts li {
         width: 100%;
         margin-left: 0;
         margin-right: 0
     }
+
     .gallery-scroller li {
         height: 250px;
         width: 250px
     }
+
     .gallery-scroller li.tweet {
         border: 8px solid transparent;
         padding: 12px
     }
+
     .gallery-scroller li.tweet h3 {
         font-size: 20pt;
         margin-top: 12px
     }
+
     .gallery-scroller li.tweet .info {
         width: 100%;
         margin-bottom: 16px
     }
+
     .gallery-scroller li.tweet .tweet_text {
         width: 100%
     }
+
     .gallery-scroller li.tweet .tweet_text a {
         color: rgba(255, 255, 255, .5)
     }
+
     .comments {
         padding: 0
     }
+
     .form-wrap .btn[type=submit] {
         font-size: 24pt
     }
@@ -5402,54 +5457,69 @@ div.lilac .currentTextHolder {
         font-size: 36pt;
         margin-bottom: 15px
     }
+
     .hero-title span:first-child:before {
         left: -52px;
         top: -10px
     }
+
     .hero-title span:last-child:after {
         right: -52px;
         top: -10px
     }
+
     .hero-subtitle {
         font-size: 24pt;
         margin-top: 12px
     }
+
     .hero-text {
         font-size: 22pt
     }
+
     .countdown>div {
         padding: 0 12px
     }
+
     .countdown>div>div {
         font-size: 26pt
     }
+
     .countdown>div>span {
         font-size: 14pt
     }
+
     h1.section-title {
         font-size: 36pt
     }
+
     .invite .invite_authors {
         font-size: 69pt
     }
+
     .invite .invite_authors span {
         font-size: 30pt
     }
+
     .invite .invite_info {
         font-size: 23pt
     }
+
     .invite .invite_info .date,
     .section-desc h1 {
         font-size: 44pt
     }
+
     .timeline_footer .punchline span {
         font-size: 50pt
     }
+
     .location-info .event_left .event_panel .info-left,
     .location-info .event_right .event_panel .info-left {
         width: 100%;
         margin-bottom: 15px
     }
+
     .location-info .event_left .event_panel .info-right,
     .location-info .event_right .event_panel .info-right {
         width: 100%;
@@ -5457,29 +5527,36 @@ div.lilac .currentTextHolder {
         border-top: 1px solid rgba(173, 159, 179, .5);
         padding-top: 15px
     }
+
     .gallery-desc {
         font-size: 18pt
     }
+
     .pagination #next,
     .pagination #previous {
         width: 100%;
         margin-bottom: 5px
     }
+
     .pagination #next li,
     .pagination #previous li {
         float: none
     }
+
     .comments h3 .icon {
         display: none
     }
+
     .form-wrap .btn[type=submit] {
         white-space: normal
     }
+
     .form-wrap .btn[type=submit] .icon {
         display: none
     }
+
     .submit_form .icon {
-        display: none!important
+        display: none !important
     }
 }
 
@@ -5487,23 +5564,28 @@ div.lilac .currentTextHolder {
     .divider-bottom-1 {
         padding-bottom: 580px
     }
+
     .divider-bottom-1::after {
         height: 482px;
-        background-image: url(../images/divider_1@2x.png)
+        background-image: url(../images/divider_1.png)
     }
+
     .divider-bottom-2 {
         padding-bottom: 970px
     }
+
     .divider-bottom-2::after {
         height: 1564px;
-        background-image: url(../images/divider_2@2x.png)
+        background-image: url(../images/divider_2.png)
     }
+
     .divider-top-2 {
         padding-bottom: 480px
     }
+
     .divider-top-2::before {
         height: 482px;
-        background-image: url(../images/divider_5@2x.png)
+        background-image: url(../images/divider_5.png)
     }
 }
 
