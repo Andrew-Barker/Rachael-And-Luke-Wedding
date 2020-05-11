@@ -1,7 +1,7 @@
 var Lilac;
-! function(e) {
+! function (e) {
     "use strict";
-    e(document).ready(function() {
+    e(document).ready(function () {
         (Lilac = {
             initialized: !1,
             mobMenuFlag: !1,
@@ -25,30 +25,30 @@ var Lilac;
             c_minutes: c_minutes,
             c_seconds: c_seconds,
             cdownEndMsg: cdownEndMsg,
-            init: function() {
+            init: function () {
                 var e = this;
                 e.initialized || (e.initialized = !0, e.build(), e.events())
             },
-            build: function() {
+            build: function () {
                 var t = this;
                 t.preloader(), t.navigation(), t.createMobileMenu(), t.heroHeight(), t.curvedText(), e("input, textarea").placeholder(), t.bgImageGrid(), t.googleMap(), t.createPrettyPhoto(), t.createOwlSliders(), t.createGallery(), t.countdown(), t.parallaxItems(), t.startNiceScroll()
             },
-            events: function() {
+            events: function () {
                 var e = this;
                 e.windowResize(), e.resizeVideos(), e.contactForm(), e.buttons(), e.animateElems()
             },
-            preloader: function() {
-                var t = setInterval(function() {
-                    /loaded|complete/.test(document.readyState) && (clearInterval(t), e("#color-picker").val("800021") && e("#preloader").fadeOut(500))
+            preloader: function () {
+                var t = setInterval(function () {
+                    /loaded|complete/.test(document.readyState) && (clearInterval(t), e("#color-picker").val("0d0285") && e("#preloader").fadeOut(500))
                 }, 10)
             },
-            navigation: function() {
-                e(".nav li a").on("click", function(t) {
+            navigation: function () {
+                e(".nav li a").on("click", function (t) {
                     var a = e(this),
                         i = 0;
                     "#" === a.attr("href").charAt(0) ? (t.preventDefault(), "#home" !== a.attr("href") && (i = e(a.attr("href")).offset().top - 65), e("html, body").stop().animate({
                         scrollTop: i
-                    }, 1500, "easeInOutExpo", function() {
+                    }, 1500, "easeInOutExpo", function () {
                         a.blur()
                     })) : window.open(a.attr("href"), "_self")
                 });
@@ -56,13 +56,13 @@ var Lilac;
                     element: e(".nav-section")
                 });
                 t = t, e("#wrapper > section").waypoint({
-                    handler: function(t) {
+                    handler: function (t) {
                         var a = e(this),
                             i = a[0].element.id;
                         "up" === t && (i = a[0].element.previousElementSibling.id), e(".nav a").removeClass("active"), e('nav a[href="#' + i + '"]').addClass("active")
                     },
                     offset: "50%"
-                }), e(window).load(function() {
+                }), e(window).load(function () {
                     var a = location.hash.replace("#", "");
                     "" !== a && (location.hash = "", e("html, body").stop().animate({
                         scrollTop: e("#" + a).offset().top - 65
@@ -71,15 +71,15 @@ var Lilac;
                     })
                 })
             },
-            createMobileMenu: function(t) {
+            createMobileMenu: function (t) {
                 var a, i, n = this,
                     s = e("#wrapper");
-                i = e.browser.mobile ? "touchstart" : "click", null !== t && (t = e(window).innerWidth()), t <= 975 && !n.mobMenuFlag && (e("body").prepend('<nav class="nav-mobile"><i class="fa fa-times"></i><h2><i class="fa fa-bars"></i>' + n.mobileMenuTitle + "</h2><ul></ul></nav>"), e(".nav-mobile > ul").html(e(".nav").html()), e(".nav-mobile b").remove(), e(".nav-mobile ul.dropdown-menu").removeClass().addClass("dropdown-mobile"), a = e(".nav-mobile"), e("#nav-mobile-btn").bind(i, function(t) {
-                    t.stopPropagation(), t.preventDefault(), setTimeout(function() {
+                i = e.browser.mobile ? "touchstart" : "click", null !== t && (t = e(window).innerWidth()), t <= 975 && !n.mobMenuFlag && (e("body").prepend('<nav class="nav-mobile"><i class="fa fa-times"></i><h2><i class="fa fa-bars"></i>' + n.mobileMenuTitle + "</h2><ul></ul></nav>"), e(".nav-mobile > ul").html(e(".nav").html()), e(".nav-mobile b").remove(), e(".nav-mobile ul.dropdown-menu").removeClass().addClass("dropdown-mobile"), a = e(".nav-mobile"), e("#nav-mobile-btn").bind(i, function (t) {
+                    t.stopPropagation(), t.preventDefault(), setTimeout(function () {
                         s.addClass("open"), a.addClass("open"), a.getNiceScroll().show()
-                    }, 25), e(document).bind(i, function(t) {
+                    }, 25), e(document).bind(i, function (t) {
                         e(t.target).hasClass("nav-mobile") || e(t.target).parents(".nav-mobile").length || (s.removeClass("open"), a.removeClass("open"), e(document).unbind(i))
-                    }), e(">i", a).bind(i, function() {
+                    }), e(">i", a).bind(i, function () {
                         a.getNiceScroll().hide(), s.removeClass("open"), a.removeClass("open"), e(document).unbind(i)
                     })
                 }), a.niceScroll({
@@ -90,28 +90,28 @@ var Lilac;
                     cursorborder: "0px solid #000",
                     horizrailenabled: !1,
                     zindex: "1"
-                }), a.getNiceScroll().hide(), n.mobMenuFlag = !0, e(".nav-mobile li a").bind("click", function(t) {
+                }), a.getNiceScroll().hide(), n.mobMenuFlag = !0, e(".nav-mobile li a").bind("click", function (t) {
                     var n = e(this),
                         o = 0;
                     "#home" !== n.attr("href") && (o = e(n.attr("href")).offset().top - 65), e("html, body").stop().animate({
                         scrollTop: o
-                    }, 1500, "easeInOutExpo", function() {
+                    }, 1500, "easeInOutExpo", function () {
                         n.blur()
                     }), a.getNiceScroll().hide(), s.removeClass("open"), a.removeClass("open"), e(document).unbind(i), t.preventDefault()
                 }))
             },
-            heroHeight: function() {
+            heroHeight: function () {
                 this.hero100PercentHeight && (e("#home").css({
                     minHeight: e(window).innerHeight() + "px"
-                }), e(window).resize(function() {
+                }), e(window).resize(function () {
                     e("#home").css({
                         minHeight: e(window).innerHeight() + "px"
                     })
                 }))
             },
-            bgImageGrid: function() {
+            bgImageGrid: function () {
                 if (e("#freewall").length) {
-                    e("#freewall .item").each(function() {
+                    e("#freewall .item").each(function () {
                         var t = e(this);
                         t.width(Math.floor(260 + 200 * Math.random())), t.css({
                             "background-image": "url(" + e(">img", t).attr("src") + ")"
@@ -124,119 +124,119 @@ var Lilac;
                         cellW: 20,
                         gutterX: 0,
                         gutterY: 0,
-                        onResize: function() {
+                        onResize: function () {
                             t.fitWidth()
                         }
                     }), t.fitWidth()
                 }
             },
-            googleMap: function() {
+            googleMap: function () {
                 if (0 === e("#map_canvas").length || "undefined" === map_markers || 0 === map_markers.length) return !1;
                 var t, a, i, n, s, o = this,
                     r = [],
                     l = 0;
                 for (/^\d|\.|-$/.test(o.map_initial_latitude) && /^\d|\.|-$/.test(map_initial_longitude) || (o.map_initial_latitude = map_markers[0].latitude, o.map_initial_longitude = map_markers[0].longitude), a = new google.maps.LatLng(o.map_initial_latitude, o.map_initial_longitude), this.use_default_map_style || (r = [{
-                    stylers: [{
-                        hue: map_color
+                        stylers: [{
+                            hue: map_color
+                        }, {
+                            saturation: -75
+                        }, {
+                            lightness: 5
+                        }]
                     }, {
-                        saturation: -75
+                        featureType: "administrative",
+                        elementType: "labels.text.fill",
+                        stylers: [{
+                            saturation: 20
+                        }, {
+                            lightness: -70
+                        }]
                     }, {
-                        lightness: 5
-                    }]
-                }, {
-                    featureType: "administrative",
-                    elementType: "labels.text.fill",
-                    stylers: [{
-                        saturation: 20
+                        featureType: "water",
+                        elementType: "geometry",
+                        stylers: [{
+                            saturation: -50
+                        }, {
+                            lightness: 40
+                        }]
                     }, {
-                        lightness: -70
-                    }]
-                }, {
-                    featureType: "water",
-                    elementType: "geometry",
-                    stylers: [{
-                        saturation: -50
+                        featureType: "road",
+                        elementType: "geometry",
+                        stylers: [{
+                            hue: map_color
+                        }, {
+                            saturation: -100
+                        }, {
+                            lightness: 0
+                        }]
                     }, {
-                        lightness: 40
-                    }]
-                }, {
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [{
-                        hue: map_color
+                        featureType: "road.highway",
+                        elementType: "geometry",
+                        stylers: [{
+                            hue: map_color
+                        }, {
+                            saturation: 5
+                        }, {
+                            lightness: 5
+                        }]
                     }, {
-                        saturation: -100
+                        featureType: "road",
+                        elementType: "geometry.stroke",
+                        stylers: [{
+                            saturation: 10
+                        }, {
+                            lightness: 0
+                        }]
                     }, {
-                        lightness: 0
-                    }]
-                }, {
-                    featureType: "road.highway",
-                    elementType: "geometry",
-                    stylers: [{
-                        hue: map_color
+                        featureType: "road.highway",
+                        elementType: "geometry.stroke",
+                        stylers: [{
+                            saturation: 0
+                        }, {
+                            lightness: 20
+                        }]
                     }, {
-                        saturation: 5
-                    }, {
-                        lightness: 5
-                    }]
-                }, {
-                    featureType: "road",
-                    elementType: "geometry.stroke",
-                    stylers: [{
-                        saturation: 10
-                    }, {
-                        lightness: 0
-                    }]
-                }, {
-                    featureType: "road.highway",
-                    elementType: "geometry.stroke",
-                    stylers: [{
-                        saturation: 0
-                    }, {
-                        lightness: 20
-                    }]
-                }, {
-                    featureType: "transit",
-                    elementType: "geometry",
-                    stylers: [{
-                        hue: map_color
-                    }, {
-                        saturation: 30
-                    }, {
-                        lightness: -30
-                    }]
-                }]), t = new google.maps.StyledMapType(r, {
-                    name: "Lilac"
-                }), i = {
-                    center: a,
-                    zoom: o.map_initial_zoom,
-                    scrollwheel: !1,
-                    panControl: !1,
-                    mapTypeControl: !1,
-                    zoomControl: !0,
-                    zoomControlOptions: {
-                        position: google.maps.ControlPosition.RIGHT_CENTER
-                    }
-                }, (n = new google.maps.Map(document.getElementById(o.map_canvas_id), i)).mapTypes.set("map_style", t), n.setMapTypeId("map_style"), s = function(e) {
-                    var t = e.latitude,
-                        a = e.longitude,
-                        i = e.icon,
-                        s = e.infoWindow,
-                        o = new google.maps.InfoWindow({
-                            content: '<div class="infoWindow">' + s + "</div>"
-                        }),
-                        r = new RichMarker({
-                            position: new google.maps.LatLng(t, a),
-                            map: n,
-                            anchor: 8,
-                            anchorPoint: new google.maps.Point(0, -40),
-                            shadow: "none",
-                            content: '<div class="marker"><i class="fa ' + i + '"></i></div>'
-                        });
-                    google.maps.event.addListener(r, "click", function() {
-                        o.open(n, r)
-                    })
-                }; l < map_markers.length;) s(map_markers[l]), l += 1
+                        featureType: "transit",
+                        elementType: "geometry",
+                        stylers: [{
+                            hue: map_color
+                        }, {
+                            saturation: 30
+                        }, {
+                            lightness: -30
+                        }]
+                    }]), t = new google.maps.StyledMapType(r, {
+                        name: "Lilac"
+                    }), i = {
+                        center: a,
+                        zoom: o.map_initial_zoom,
+                        scrollwheel: !1,
+                        panControl: !1,
+                        mapTypeControl: !1,
+                        zoomControl: !0,
+                        zoomControlOptions: {
+                            position: google.maps.ControlPosition.RIGHT_CENTER
+                        }
+                    }, (n = new google.maps.Map(document.getElementById(o.map_canvas_id), i)).mapTypes.set("map_style", t), n.setMapTypeId("map_style"), s = function (e) {
+                        var t = e.latitude,
+                            a = e.longitude,
+                            i = e.icon,
+                            s = e.infoWindow,
+                            o = new google.maps.InfoWindow({
+                                content: '<div class="infoWindow">' + s + "</div>"
+                            }),
+                            r = new RichMarker({
+                                position: new google.maps.LatLng(t, a),
+                                map: n,
+                                anchor: 8,
+                                anchorPoint: new google.maps.Point(0, -40),
+                                shadow: "none",
+                                content: '<div class="marker"><i class="fa ' + i + '"></i></div>'
+                            });
+                        google.maps.event.addListener(r, "click", function () {
+                            o.open(n, r)
+                        })
+                    }; l < map_markers.length;) s(map_markers[l]), l += 1
             },
             // getLatestTweets: function() {
             //     var t = this;
@@ -284,13 +284,13 @@ var Lilac;
             //         }
             //     })
             // },
-            createPrettyPhoto: function() {
+            createPrettyPhoto: function () {
                 e("a[data-gal^='prettyPhoto']").prettyPhoto({
                     theme: "lilac",
                     hook: "data-gal"
                 })
             },
-            createOwlSliders: function() {
+            createOwlSliders: function () {
                 e(".timeline-gallery").length && e(".timeline-gallery").owlCarousel({
                     navigation: !0,
                     navigationText: !1,
@@ -317,47 +317,47 @@ var Lilac;
                     ]
                 })
             },
-            createGallery: function() {
+            createGallery: function () {
                 var t = e(".gallery-scroller"),
                     a = !1;
-                e(".gallery-right").click(function() {
+                e(".gallery-right").click(function () {
                     if (a) return !1;
                     a = !0, t.animate({
                         scrollLeft: t.scrollLeft() + 380
-                    }, function() {
+                    }, function () {
                         a = !1
                     })
-                }), e(".gallery-left").click(function() {
+                }), e(".gallery-left").click(function () {
                     if (a) return !1;
                     a = !0, t.animate({
                         scrollLeft: t.scrollLeft() - 380
-                    }, function() {
+                    }, function () {
                         a = !1
                     })
                 })
             },
-            curvedText: function() {
+            curvedText: function () {
                 e(".curve").length && (e(".curve").arctext({
                     radius: 1e3
-                }), e(window).resize(function() {
+                }), e(window).resize(function () {
                     e(".curve").arctext("set", {
                         radius: 1e3
                     })
                 })), e(".curve2").length && (e(".curve2").arctext({
                     radius: 800,
                     dir: -1
-                }), e(window).resize(function() {
+                }), e(window).resize(function () {
                     e(".curve2").arctext("set", {
                         radius: 800,
                         dir: -1
                     })
                 }))
             },
-            countdown: function(t, a) {
+            countdown: function (t, a) {
                 var i, n = this,
                     s = new Date(a),
                     o = e("" + t);
-                o.html('<div class="days"><span>' + n.c_days + '</span><div></div></div><div class="hours"><span>' + n.c_hours + '</span><div></div></div><div class="minutes"><span>' + n.c_minutes + '</span><div></div></div><div class="seconds"><span>' + n.c_seconds + "</span><div></div></div>"), i = setInterval(function() {
+                o.html('<div class="days"><span>' + n.c_days + '</span><div></div></div><div class="hours"><span>' + n.c_hours + '</span><div></div></div><div class="minutes"><span>' + n.c_minutes + '</span><div></div></div><div class="seconds"><span>' + n.c_seconds + "</span><div></div></div>"), i = setInterval(function () {
                     var t = new Date,
                         a = s - t;
                     if (a < 0) return o.html('<div class="end">' + n.countdownEndMsg + "</div>"), clearInterval(i), !1;
@@ -368,15 +368,15 @@ var Lilac;
                     e(".days > div", o).html(r), e(".hours > div", o).html(l), e(".minutes > div", o).html(c), e(".seconds > div", o).html(d)
                 }, 1e3)
             },
-            parallaxItems: function() {
+            parallaxItems: function () {
                 e.browser.mobile ? e(".parallax").css({
                     "background-position": "50% 50%",
                     "background-size": "cover",
                     "background-attachment": "scroll"
                 }) : e.stellar()
             },
-            startNiceScroll: function() {
-                e(document).ready(function() {
+            startNiceScroll: function () {
+                e(document).ready(function () {
                     e(".gallery-scroller").niceScroll({
                         cursorcolor: "#fff",
                         cursorwidth: "0px",
@@ -389,30 +389,30 @@ var Lilac;
                     })
                 })
             },
-            windowResize: function() {
+            windowResize: function () {
                 var t = this;
-                e(window).resize(function() {
+                e(window).resize(function () {
                     var a = e(window).innerWidth();
                     t.createMobileMenu(a)
                 })
             },
-            resizeVideos: function() {
+            resizeVideos: function () {
                 var t = e("iframe[src^='http://player.vimeo.com'], iframe[src^='https://player.vimeo.com'], iframe[src^='http://www.youtube.com'], iframe[src^='https://www.youtube.com'], object, embed"),
                     a = e(".videoEmbed");
-                t.each(function() {
+                t.each(function () {
                     var t = e(this);
                     t.attr("data-aspectRatio", t.height() / t.width()).removeAttr("height").removeAttr("width")
-                }), e(window).resize(function() {
+                }), e(window).resize(function () {
                     var i = a.width();
-                    t.each(function() {
+                    t.each(function () {
                         var t = e(this);
                         t.width(i).height(i * t.attr("data-aspectRatio"))
                     })
                 }).resize()
             },
-            contactForm: function() {
+            contactForm: function () {
                 var t = this;
-                e(".submit_form").click(function(a) {
+                e(".submit_form").click(function (a) {
                     a.preventDefault();
                     var i, n, s, o, r = e(this),
                         l = r.closest("form"),
@@ -422,54 +422,54 @@ var Lilac;
                         u = "contact",
                         h = !1,
                         f = [];
-                    return o = function(e) {
+                    return o = function (e) {
                         return encodeURIComponent(e)
-                    }, c.each(function() {
+                    }, c.each(function () {
                         var t = e(this);
                         "hidden" === t.attr("type") ? t.hasClass("subject") ? u += "&subject=" + o(t.val()) : t.hasClass("fromName") || t.hasClass("fromname") ? u += "&fromname=" + o(t.val()) : t.hasClass("fromEmail") || t.hasClass("fromemail") ? u += "&fromemail=" + o(t.val()) : (t.hasClass("emailTo") || t.hasClass("emailto")) && (u += "&emailto=" + o(t.val())) : t.hasClass("required") && "" === t.val() ? (t.addClass("invalid"), h = !0) : "email" === t.attr("type") && "" !== t.val() && !1 === m.test(t.val()) ? (t.addClass("invalid"), h = !0) : "recaptcha_response_field" !== t.attr("id") && (t.removeClass("invalid"), t.hasClass("subject") ? (u += "&subject=" + o(t.val()), u += "&subject_label=" + t.attr("name")) : t.hasClass("fromName") || t.hasClass("fromname") ? (u += "&fromname=" + o(t.val()), u += "&fromname_label=" + t.attr("name")) : t.hasClass("fromEmail") || t.hasClass("fromemail") ? (u += "&fromemail=" + o(t.val()), u += "&fromemail_label=" + t.attr("name")) : t.hasClass("radio-lilac") ? (u += "&field" + d + "_label=" + t.data("value"), u += "&field" + d + "_value=" + e(".active", t).data("value"), d += 1) : (u += "&field" + d + "_label=" + t.attr("name"), u += "&field" + d + "_value=" + o(t.val()), d += 1))
-                    }), u += "&len=" + d, i = function() {
-                        r.width(r.width()), e("i", r).each(function() {
+                    }), u += "&len=" + d, i = function () {
+                        r.width(r.width()), e("i", r).each(function () {
                             var t = e(this),
                                 a = t.attr("class");
-                            t.removeClass(a).addClass("fa fa-times").delay(1500).queue(function(t) {
+                            t.removeClass(a).addClass("fa fa-times").delay(1500).queue(function (t) {
                                 e(this).removeClass("fa fa-times").addClass(a), t()
                             })
-                        }), r.addClass("btn-danger").delay(1500).queue(function(t) {
+                        }), r.addClass("btn-danger").delay(1500).queue(function (t) {
                             e(this).removeClass("btn-danger"), t()
                         }), e(".form_status_message").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + contact_form_error_msg + "</div>")
-                    }, n = function() {
-                        r.width(r.width()), e("i", r).each(function() {
+                    }, n = function () {
+                        r.width(r.width()), e("i", r).each(function () {
                             var t = e(this),
                                 a = t.attr("class");
-                            t.removeClass(a).addClass("fa fa-check").delay(1500).queue(function(t) {
+                            t.removeClass(a).addClass("fa fa-check").delay(1500).queue(function (t) {
                                 e(this).removeClass("fa fa-check").addClass(a), t()
                             })
-                        }), r.addClass("btn-success").delay(1500).queue(function(t) {
+                        }), r.addClass("btn-success").delay(1500).queue(function (t) {
                             e(this).removeClass("btn-success"), t()
                         }), e(".form_status_message").html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + contact_form_success_msg + "</div>")
-                    }, s = function() {
-                        e("i", r).each(function(t) {
+                    }, s = function () {
+                        e("i", r).each(function (t) {
                             e(this).removeClass("fa fa-cog fa-spin").addClass(f[t])
                         }), r.removeClass("disabled")
-                    }, h || t.sendingMail ? i() : (t.sendingMail = !0, e("i", r).each(function(t) {
+                    }, h || t.sendingMail ? i() : (t.sendingMail = !0, e("i", r).each(function (t) {
                         var a = e(this);
                         f[t] = a.attr("class"), a.removeClass(f[t]).addClass("fa fa-cog fa-spin")
                     }), r.addClass("disabled"), e.ajax({
                         type: "POST",
                         url: "contact.php",
                         data: u,
-                        success: function(e) {
+                        success: function (e) {
                             s(), "ok" === e ? (n(), l[0].reset()) : i(), t.sendingMail = !1
                         },
-                        error: function() {
+                        error: function () {
                             s(), i(), t.sendingMail = !1
                         }
                     })), !1
                 })
             },
-            buttons: function() {
+            buttons: function () {
                 var t = !0;
-                e(".bridesmaids-groomsmen-buttons .btn").click(function(a) {
+                e(".bridesmaids-groomsmen-buttons .btn").click(function (a) {
                     a.preventDefault();
                     var i = e(this),
                         n = i.data("slider");
@@ -478,12 +478,12 @@ var Lilac;
                     }), t ? (t = !1, e("#" + n).removeClass("hide")) : e("#" + n).removeClass("hide").animate({
                         opacity: 1
                     }, 500)), e(".bridesmaids-groomsmen-buttons .btn").removeClass("active"), i.addClass("active")
-                }), e(".radio-lilac button").click(function(t) {
+                }), e(".radio-lilac button").click(function (t) {
                     t.preventDefault();
                     var a = e(this);
                     if (a.hasClass("active")) return !1;
                     a.parent().find("button").removeClass("active"), a.addClass("active")
-                }), e(".add_button").click(function(t) {
+                }), e(".add_button").click(function (t) {
                     t.preventDefault();
                     var a, i = e(this),
                         n = i.data("wrapper"),
@@ -492,26 +492,26 @@ var Lilac;
                         r = o.val();
                     if ("" === r) return o.addClass("invalid"), !1;
                     a = '<div class="input-group"><input type="text" class="form-control" name="' + i.data("input") + "_" + s + '" value="' + r + '" /><span class="input-group-addon"><i class="fa fa-trash"></i></span></div>', e("#" + n).data("count", s).append(a), o.val(""), o.removeClass("invalid")
-                }), e(".add_list").on("click", ".input-group-addon", function() {
+                }), e(".add_list").on("click", ".input-group-addon", function () {
                     e(this).closest(".input-group").remove()
                 })
             },
-            animateElems: function() {
+            animateElems: function () {
                 if (e.browser.mobile) return !1;
-                var t = function() {
-                    e("[data-animation-delay]").each(function() {
+                var t = function () {
+                    e("[data-animation-delay]").each(function () {
                         var t = e(this),
                             a = e(window).scrollTop(),
                             i = e(window).height(),
                             n = parseInt(t.attr("data-animation-delay"), 10),
                             s = t.data("animation-direction");
                         if (void 0 === s) return !1;
-                        t.addClass("animate-" + s), a + i >= t.offset().top && (isNaN(n) || 0 === n ? t.removeClass("animate-" + s).addClass("animation-" + s) : setTimeout(function() {
+                        t.addClass("animate-" + s), a + i >= t.offset().top && (isNaN(n) || 0 === n ? t.removeClass("animate-" + s).addClass("animation-" + s) : setTimeout(function () {
                             t.removeClass("animate-me").addClass("animation-" + s)
                         }, n))
                     })
                 };
-                e(window).innerWidth() >= 751 && (e(window).scroll(function() {
+                e(window).innerWidth() >= 751 && (e(window).scroll(function () {
                     t()
                 }), t())
             }
