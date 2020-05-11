@@ -1,0 +1,102 @@
+h1, h2, h3, h4, h5, h6, .color, a, a:hover, a:focus, .btn-default:hover, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default, .btn.ribbon::before, .btn.ribbon::after, .btn.ribbon:hover, .btn.ribbon.btn-color::before, .btn.ribbon.btn-color::after, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a:hover, .nav > li > a:focus, .navbar-nav > li > a.active, .navbar-nav .dropdown-menu > li > a:hover, .navbar-nav .dropdown-menu > li > a:focus, .navbar-nav .dropdown-menu > li > a.active, .nav-mobile a:hover, .timeline .year .ribbon, .timeline_footer .punchline, .marker, .location-info .event_left .event_panel h4 small, .location-info .event_right .event_panel h4 small, .bridesmaids-groomsmen-slider .item .image .info h3, .wedding-gifts li, .gallery-scroller li > span i, .gallery-scroller li > span .fa, .blog-listing .item .info-blog h3 a, .blog-listing .ribbon, .blog-main-image .ribbon, .categories li a:hover, .categories li a:hover span, .categories li:hover:before, .blog-accordion.panel-group .panel .panel-body ul li a:hover, .blog-accordion.panel-group .panel .panel-body ul li:hover:before, .blog-bottom-info #post-author i, .post-content .highlight-color, .post-content .quote span, .share-wrapper .print-button:hover, .form-control, .add_list .input-group-addon:hover, #footer a, #footer a:hover, .sn-icons a {
+    color: #800020;
+}
+
+.bg-color, #preloader > div.heartbeat:not(:required):after, #preloader > div.heartbeat:not(:required):before, .section-title::before, .section-title::after, .btn-color, .btn-color:focus, .btn-color.focus, .btn-color:hover, .btn-color:active, .btn-color.active, .open > .dropdown-toggle.btn-color, .btn.ribbon.btn-color, .bg-color .btn.ribbon.btn-color, .bg-color-overlay .btn.ribbon.btn-color, .owl-controls .owl-buttons div.owl-prev:hover, .owl-controls .owl-buttons div.owl-next:hover, .divider-bottom-2.divider-bg-color::after, .divider-bottom-2.divider-pattern.divider-bg-color::before, #nav-mobile-btn, .story-elem h3::after, .balloon-left::before, .balloon-right::before, .timeline::before, .timeline .event_left::before, .timeline .event_right::before, .timeline .event_left .event_panel h3::after, .timeline .event_right .event_panel h3::after, .timeline .event_left:hover .event_panel::before, .timeline .event_right:hover .event_panel::before, .marker:hover, .gallery-wrapper .gallery-left:hover, .gallery-wrapper .gallery-right:hover, .gallery-scroller li, .gallery-scroller li > span i:hover, .gallery-scroller li > span .fa:hover, .sidebar h2::after, .tags li a:hover, .blog-title::before, .blog-title::after, .post-content h2::after, .comments .comment::before, .comments .comment h4::after, .bg-color .btn .line_above::after, .bg-color-overlay .btn .line_above::after, #footer.bg-color, #footer.bg-color-overlay, div.lilac .pp_details, a.pp_next:hover, a.pp_previous:hover, .blog-listing .item .info-blog h3::after {
+    background-color: #800020;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default, .btn.ribbon, .owl-controls .owl-buttons, .owl-controls .owl-page span, .timeline .year .ribbon, .timeline .event_left:hover::after, .timeline .event_right:hover::after, .timeline .event_left:hover .event_panel, .timeline .event_right:hover .event_panel, .marker, .wedding-gifts li, .gallery-scroller li > span i, .gallery-scroller li > span .fa, .blog-listing .ribbon, .blog-main-image .ribbon, .form-control:focus, .sn-icons a {
+    border-color: #800020;
+}
+
+.navbar-nav .dropdown-submenu:hover > a:after {
+    border-left-color: #800020;
+}
+
+.balloon-left::after, .balloon-right::after, .marker::before, .marker:hover::after {
+    border-top-color: #800020;
+}
+
+.btn-default, .btn-default:focus, .btn-default.focus, .btn.ribbon {
+    color: rgba(128,0,32,0.65);
+}
+
+.add_list .input-group-addon {
+    color: rgba(128,0,32,0.5);
+}
+
+.form-control {
+    border-color: rgba(128,0,32,0.7);
+}
+
+.btn-default, .btn-default:focus, .btn-default.focus {
+    border-color: rgba(128,0,32,0.65);
+}
+
+.timeline .event_left::after, .timeline .event_right::after, .timeline .event_left .event_panel, .timeline .event_right .event_panel, .timeline_footer::before, .comments > ul > li .comment_image, .comments > ul > li .comment_image::after, .comments .comment, .form-wrap, .form-wrap::before, .form-wrap .line_above::after, .add_list .form-control, .btn .line_above::after {
+    border-color: rgba(128,0,32,0.5);
+}
+
+.story-elem h3, .timeline .event_left .event_panel h3, .timeline .event_right .event_panel h3, .sidebar h2, .post-content h2, .comments .comment h4, .form-wrap section.highlighted, .add_list .input-group:last-child .form-control, .add_list .input-group:last-child .input-group-addon, .blog-listing .item .info-blog h3 {
+    border-bottom-color: rgba(128,0,32,0.5);
+}
+
+.add_list .input-group-addon::after {
+    border-left-color: rgba(128,0,32,0.5);
+}
+
+.form-wrap section.highlighted, #footer {
+    border-top-color: rgba(128,0,32,0.5);
+}
+
+.wedding-gifts li:hover::before {
+    background-color: rgba(128,0,32,0.9);
+}
+
+.timeline-gallery .item a, .blog-listing .item .image a {
+    background-color: rgba(128,0,32,0.8);
+}
+
+.owl-controls .owl-page.active span, .owl-controls.clickable .owl-page:hover span, .bg-color .owl-controls .owl-page.active span, .bg-color-overlay .owl-controls .owl-page.active span, .bg-color .owl-controls.clickable .owl-page:hover span, .bg-color-overlay .owl-controls.clickable .owl-page:hover span, .story-elem .image .hover-info, .gallery-scroller li > span {
+    background-color: rgba(128,0,32,0.7);
+}
+
+.timeline .event_left .event_panel::before, .timeline .event_right .event_panel::before, .timeline_footer::after, .comments > ul > li .comment_image::before, .form-wrap .line_above, .form-wrap .line_above::before, .btn .line_above, .btn .line_above::before {
+    background-color: rgba(128,0,32,0.5);
+}
+
+.bg-color .owl-controls .owl-page span, .bg-color-overlay .owl-controls .owl-page span, #footer::before {
+    background-color: rgba(128,0,32,0.2);
+}
+
+.form-wrap section.highlighted, .add_list .form-control, .add_list .input-group-addon {
+    background-color: rgba(128,0,32,0.1);
+}
+
+.bridesmaids-groomsmen-slider .item .image .info {
+    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(128,0,32,0.2);
+}
+
+.bridesmaids-groomsmen-slider .item .image .info {
+    -moz-box-shadow: inset 0px 0px 0px 2px rgba(128,0,32,0.2);
+}
+
+.bridesmaids-groomsmen-slider .item .image .info {
+    box-shadow: inset 0px 0px 0px 2px rgba(128,0,32,0.2);
+}
+
+#home::before, .bg-color-overlay::before {
+    background-color: #630019;
+}
+
+.btn-outline{
+    border-color: #800020;
+    background: transparent;
+    color: #800020;
+}
+
+.btn-outline:hover{
+    background-color: #800020;
+    color: white;
+}
