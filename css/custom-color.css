@@ -53,7 +53,7 @@ a:focus,
 #footer a,
 #footer a:hover,
 .sn-icons a {
-    color: #0d0285;
+    color: #374e7a;
 }
 
 .bg-color,
@@ -107,7 +107,7 @@ div.lilac .pp_details,
 a.pp_next:hover,
 a.pp_previous:hover,
 .blog-listing .item .info-blog h3::after {
-    background-color: #0d0285;
+    background-color: #374e7a;
 }
 
 .btn-default:hover,
@@ -130,39 +130,39 @@ a.pp_previous:hover,
 .blog-main-image .ribbon,
 .form-control:focus,
 .sn-icons a {
-    border-color: #0d0285;
+    border-color: #374e7a;
 }
 
 .navbar-nav .dropdown-submenu:hover>a:after {
-    border-left-color: #0d0285;
+    border-left-color: #374e7a;
 }
 
 .balloon-left::after,
 .balloon-right::after,
 .marker::before,
 .marker:hover::after {
-    border-top-color: #0d0285;
+    border-top-color: #374e7a;
 }
 
 .btn-default,
 .btn-default:focus,
 .btn-default.focus,
 .btn.ribbon {
-    color: rgba(13, 2, 133, 0.65);
+    color: rgba(55, 78, 122, 0.65);
 }
 
 .add_list .input-group-addon {
-    color: rgba(13, 2, 133, 0.5);
+    color: rgba(55, 78, 122, 0.5);
 }
 
 .form-control {
-    border-color: rgba(13, 2, 133, 0.7);
+    border-color: rgba(55, 78, 122, 0.7);
 }
 
 .btn-default,
 .btn-default:focus,
 .btn-default.focus {
-    border-color: rgba(13, 2, 133, 0.65);
+    border-color: rgba(55, 78, 122, 0.65);
 }
 
 .timeline .event_left::after,
@@ -178,7 +178,7 @@ a.pp_previous:hover,
 .form-wrap .line_above::after,
 .add_list .form-control,
 .btn .line_above::after {
-    border-color: rgba(13, 2, 133, 0.5);
+    border-color: rgba(55, 78, 122, 0.5);
 }
 
 .story-elem h3,
@@ -191,25 +191,25 @@ a.pp_previous:hover,
 .add_list .input-group:last-child .form-control,
 .add_list .input-group:last-child .input-group-addon,
 .blog-listing .item .info-blog h3 {
-    border-bottom-color: rgba(13, 2, 133, 0.5);
+    border-bottom-color: rgba(55, 78, 122, 0.5);
 }
 
 .add_list .input-group-addon::after {
-    border-left-color: rgba(13, 2, 133, 0.5);
+    border-left-color: rgba(55, 78, 122, 0.5);
 }
 
 .form-wrap section.highlighted,
 #footer {
-    border-top-color: rgba(13, 2, 133, 0.5);
+    border-top-color: rgba(55, 78, 122, 0.5);
 }
 
 .wedding-gifts li:hover::before {
-    background-color: rgba(13, 2, 133, 0.9);
+    background-color: rgba(55, 78, 122, 0.9);
 }
 
 .timeline-gallery .item a,
 .blog-listing .item .image a {
-    background-color: rgba(13, 2, 133, 0.8);
+    background-color: rgba(55, 78, 122, 0.8);
 }
 
 .owl-controls .owl-page.active span,
@@ -220,7 +220,7 @@ a.pp_previous:hover,
 .bg-color-overlay .owl-controls.clickable .owl-page:hover span,
 .story-elem .image .hover-info,
 .gallery-scroller li>span {
-    background-color: rgba(13, 2, 133, 0.7);
+    background-color: rgba(55, 78, 122, 0.7);
 }
 
 .timeline .event_left .event_panel::before,
@@ -231,45 +231,50 @@ a.pp_previous:hover,
 .form-wrap .line_above::before,
 .btn .line_above,
 .btn .line_above::before {
-    background-color: rgba(13, 2, 133, 0.5);
+    background-color: rgba(55, 78, 122, 0.5);
 }
 
 .bg-color .owl-controls .owl-page span,
 .bg-color-overlay .owl-controls .owl-page span,
 #footer::before {
-    background-color: rgba(13, 2, 133, 0.2);
+    background-color: rgba(55, 78, 122, 0.2);
 }
 
 .form-wrap section.highlighted,
 .add_list .form-control,
 .add_list .input-group-addon {
-    background-color: rgba(13, 2, 133, 0.1);
+    background-color: rgba(55, 78, 122, 0.1);
 }
 
 .bridesmaids-groomsmen-slider .item .image .info {
-    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(13, 2, 133, 0.2);
+    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(55, 78, 122, 0.2);
 }
 
 .bridesmaids-groomsmen-slider .item .image .info {
-    -moz-box-shadow: inset 0px 0px 0px 2px rgba(13, 2, 133, 0.2);
+    -moz-box-shadow: inset 0px 0px 0px 2px rgba(55, 78, 122, 0.2);
 }
 
 .bridesmaids-groomsmen-slider .item .image .info {
-    box-shadow: inset 0px 0px 0px 2px rgba(13, 2, 133, 0.2);
+    box-shadow: inset 0px 0px 0px 2px rgba(55, 78, 122, 0.2);
 }
 
 #home::before,
 .bg-color-overlay::before {
-    background-color: #0a0266;
+    background-color: #2a3c5e;
 }
 
 .btn-outline {
-    border-color: #0d0285;
+    border-color: #374e7a;
     background: transparent;
-    color: #0d0285;
+    color: #374e7a;
 }
 
 .btn-outline:hover {
-    background-color: #0d0285;
+    background-color: #374e7a;
+    color: white;
+}
+
+.btn-outline.active {
+    background-color: #374e7a;
     color: white;
 }

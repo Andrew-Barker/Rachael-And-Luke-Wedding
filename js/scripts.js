@@ -39,7 +39,7 @@ var Lilac;
             },
             preloader: function () {
                 var t = setInterval(function () {
-                    /loaded|complete/.test(document.readyState) && (clearInterval(t), e("#color-picker").val("0d0285") && e("#preloader").fadeOut(500))
+                    /loaded|complete/.test(document.readyState) && (clearInterval(t), e("#color-picker").val("#374e7a") && e("#preloader").fadeOut(500))
                 }, 10)
             },
             navigation: function () {
