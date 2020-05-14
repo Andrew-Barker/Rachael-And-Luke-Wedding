@@ -5567,7 +5567,7 @@ div.lilac .currentTextHolder {
 
     .divider-bottom-1::after {
         height: 482px;
-        background-image: url(../images/divider_1.png)
+        background-image: url(../images/divider_1@2x.png)
     }
 
     .divider-bottom-2 {
@@ -5576,7 +5576,7 @@ div.lilac .currentTextHolder {
 
     .divider-bottom-2::after {
         height: 1564px;
-        background-image: url(../images/divider_2.png)
+        background-image: url(../images/divider_2@2x.png)
     }
 
     .divider-top-2 {
@@ -5596,4 +5596,14 @@ iframe[name='google_conversion_frame'] {
     font-size: 0 !important;
     margin-top: -13px;
     float: left;
+}
+
+.hero-logo {
+    color: #374e7a;
+    margin-top: 25px;
+}
+
+.hero-logo::before {
+    margin-top: 25px;
+    content: "";
 }
