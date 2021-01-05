@@ -63,6 +63,7 @@
 
     <!-- Modernizr -->
     <script src="js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -151,9 +152,9 @@
                     <!--</ul>-->
                     <!--</li>-->
 
-                    <!-- <li>
-                      <a href="#rsvp">RSVP/Contact</a>
-                    </li> -->
+                    <li>
+                      <a href="#rsvp">RSVP</a>
+                    </li>
                   </ul>
                 </nav>
                 <!-- END MAIN MENU -->
@@ -870,7 +871,7 @@
                     <div class="info-left">
                       <h4>
                         Ceremony
-                        <small>6:00 PM</small>
+                        <small>5:30 PM</small>
                       </h4>
                     </div>
 
@@ -886,7 +887,7 @@
                     <div class="info-left">
                       <h4>
                         Reception
-                        <small>7:30 PM</small>
+                        <small>6:30 PM</small>
                       </h4>
                     </div>
 
@@ -1345,7 +1346,7 @@
       <!-- END BLOG SECTION -->
 
       <!-- BEGIN CONTACTS SECTION -->
-      <!-- <section id="rsvp" class="bg-color pattern">
+      <section id="rsvp" class="bg-color pattern">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -1355,26 +1356,26 @@
 
           <div class="row">
             <div class="col-sm-8 center">
-              <form id="form-rsvp" method="post" action="#">
+              <form id="form-rsvp">
                 <div class="form-wrap">
                   <section class="highlighted">
                     <h3>
                       <i class="icon icon-arrow-right"></i>Will you be attending the wedding?
                       <i class="icon icon-arrow-left"></i>
                     </h3>
-                    <div data-value="attending_wedding" class="radio-lilac col-sm-12">
-                      <button class="btn btn-default active" data-value="yes"><i class="fa fa-smile-o"></i>Yes</button>
-                      <button class="btn btn-default" data-value="no"><i class="fa fa-frown-o"></i>No</button>
+                    <div data-value="attending_wedding" id="rsvpResponse" class="radio-lilac col-sm-12">
+                      <button class="btn btn-default active" id="rsvpYes" data-value="true"><i class="fa fa-smile-o"></i>Yes</button>
+                      <button class="btn btn-default" data-value="false" id="rsvpNo"><i class="fa fa-frown-o"></i>No</button>
                     </div>
                     <div class="col-sm-6">
-                      <input type="text" name="Name" placeholder="YOUR NAME*" class="form-control required fromName" />
+                      <input type="text" name="firstName" id="firstName" placeholder="FIRST NAME*" class="form-control required fromName" />
                     </div>
                     <div class="col-sm-6">
-                      <input type="email" name="Email" placeholder="YOUR EMAIL*" class="form-control required fromEmail" />
+                      <input type="text" name="lastName" id="lastName" placeholder="LAST NAME*" class="form-control required fromEmail" />
                     </div>
                   </section>
 
-                  <section>
+                  <section id="additionalGuests" style="display: none">
                     <h3>
                       <i class="icon icon-arrow-right"></i>Who else is comming with you?
                       <i class="icon icon-arrow-left"></i>
@@ -1387,20 +1388,24 @@
                         + Add Guest
                       </button>
                     </div>
-                    <div id="guest_list" class="add_list col-md-12" data-count="2">
-                    </div>
+                    <div id="guest_list" class="add_list col-md-12" data-count="2"></div>
                   </section>
 
                   <section class="highlighted">
                     <div class="col-sm-12">
-                      <textarea name="Message" placeholder="LEAVE A NOTE (OPTIONAL)" class="form-control"></textarea>
+                      <textarea
+                        name="Message"
+                        placeholder="PLEASE LIST YOUR PIZZA PREFERENCES (CHEESE OR PEPPERONI) FOR EACH GUEST AND NOTE ANY DIETARY RESTRICTIONS"
+                        class="form-control"
+                        id="rsvpMessage"
+                      ></textarea>
                       <div class="form_status_message"></div>
                     </div>
                   </section>
                 </div>
 
                 <div class="center">
-                  <button type="submit" class="btn ribbon btn-color submit_form">
+                  <button type="button" id="submitRsvp" class="btn ribbon btn-color">
                     <span class="line_above"></span>
                     <i class="icon icon-arrow-right"></i>Submit
                     <i class="icon icon-arrow-left"></i>
@@ -1410,7 +1415,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- END CONTACTS SECTION -->
 
       <!-- BEGIN FOOTER -->
@@ -1481,8 +1486,18 @@
 
     <script>
       $(document).ready(function () {
+        let validGuest;
+        let guestList = [];
+
+        emailjs.init("user_KwmIYLa7Pmjva4PmM29xI");
+
+        $.getJSON("js/rsvp.json", function (data) {
+          console.log("data:\n", data); //json output
+          guestList = data;
+        });
+
         const wilburnBio = `Hi everybody! My name is Katie Wilburn.  I am beyond touched to be Rachael’s maid of honor! I met Rachael in seventh grade.  We were on the tennis team together and I learned we were neighbors, so our friendship was pretty much destiny.  Between seeing each other at tennis practice, working together at Panera, and all the sleep overs, we became very close.  Rachael and I met Luke at Panera.  We quickly decided to include him in our tennis practices (though at times he was more interested in the geese than actually playing tennis).  Rachael and Luke have been there for me through all the hard times and there to celebrate the amazing times.
-I am a junior at the University of Cincinnati, and I would not have gotten this far without the help of coffee.  I am majoring in dietetics so my whole life revolves around food! I love trying new foods and activities.  Right now, I am most excited by rock climbing and weightlifting.  One of my favorite ways to pass the time is experimenting in the kitchen with my little sister.  I am a sucker for cheesy jokes and vintage clothing stores.`;
+      I am a junior at the University of Cincinnati, and I would not have gotten this far without the help of coffee.  I am majoring in dietetics so my whole life revolves around food! I love trying new foods and activities.  Right now, I am most excited by rock climbing and weightlifting.  One of my favorite ways to pass the time is experimenting in the kitchen with my little sister.  I am a sucker for cheesy jokes and vintage clothing stores.`;
 
         const rileyBio = `Hi everyone! My name is Emily and I grew up in Cincinnati as a childhood friend of Rachael! I recently graduated from Liberty University, am getting married in July, and love playing tennis. Rachael and I have been friends since we were practically born, so I have been with Rachael through all different seasons of life and have seen her grow into a beautiful lady and an amazing person! I remember when Rachael first met Luke and how excited she became when talking about him, so I am thrilled to now be apart of their big day!`;
 
@@ -1504,9 +1519,9 @@ I am a junior at the University of Cincinnati, and I would not have gotten this 
 
         const mattTaylorBio = `Luke and I went to the same high school, but didn’t become friends until after we graduated. Our friendship is predicated on long, hilarious conversations around many bonfires. Luke and Rachael are incredible people, and their friendship has always been a source of great comfort and joy in my life.`;
 
-        const johnLodiBio = `Hi, I’m John. I currently work in Michigan as a software engineer in the automotive industry. I’m married to the love of my life and have two beautiful [dogs], Zero and Chloe. 
+        const johnLodiBio = `Hi, I’m John. I currently work in Michigan as a software engineer in the automotive industry. I’m married to the love of my life and have two beautiful [dogs], Zero and Chloe.
 
-I don’t think there’s a person in our high school that didn’t know Luke. He’s a genuine guy who never ceases to entertain or provide valuable/honest advice. To be honest, I can’t even remember meeting him; we’ve been friends for a while! We hung out a lot more once we graduated high school (I remember we literally met for food right after the last day of school). I am so excited to have watched Luke and Rachael’s love blossom (even if it’s from a distance), and am so excited to see them marry!`;
+      I don’t think there’s a person in our high school that didn’t know Luke. He’s a genuine guy who never ceases to entertain or provide valuable/honest advice. To be honest, I can’t even remember meeting him; we’ve been friends for a while! We hung out a lot more once we graduated high school (I remember we literally met for food right after the last day of school). I am so excited to have watched Luke and Rachael’s love blossom (even if it’s from a distance), and am so excited to see them marry!`;
 
         const kyleSchladeBio = `Hello, my name is Kyle and I am a big sports fan and enjoy any activity that involves being outside. I have known Rachael and Luke for the past few years, having met through my wife Laura. We always enjoy spending time with this amazing couple whether it involves bowling, a game night, celebrating a holiday, or simply hanging out. I am honored to be included on their special day and wish them nothing but the best going forward!`;
 
@@ -1580,8 +1595,168 @@ I don’t think there’s a person in our high school that didn’t know Luke. H
             imageAlt: `Image of ${title} ${name}`,
             confirmButtonColor: "#2a3c5e",
           });
-          // console.log("show bridal bio", $this.data("name"));
         });
+
+        $("#rsvpNo").click(function () {
+          $("#additionalGuests").hide();
+        });
+
+        // $("#rsvpYes").click(function () {
+        //   $("#additionalGuests").show();
+        // });
+
+        $("#add_guest").click(function () {
+          const numOfAddGuest = $("#guest_list")[0].childElementCount;
+          if (numOfAddGuest + 1 >= validGuest.maxGuests) {
+            $("#add_guest").hide();
+          }
+        });
+
+        // $(".input-group-addon").click(function () {
+        //   console.log("remove add guest");
+        //   const numOfAddGuest = $("#guest_list")[0].childElementCount;
+        //   if (numOfAddGuest + 1 < validGuest.maxGuests) {
+        //     $("#add_guest").show();
+        //   }
+        // });
+
+        $("#firstName").focusout(function () {
+          const firstName = $(this)[0].value.trim().toUpperCase();
+          const lastName = $("#lastName").val().trim().toUpperCase();
+
+          validateGuests(firstName, lastName);
+        });
+
+        $("#lastName").focusout(function () {
+          const lastName = $(this)[0].value.trim().toUpperCase();
+          const firstName = $("#firstName").val().trim().toUpperCase();
+          validateGuests(firstName, lastName);
+        });
+
+        function validateGuests(firstName, lastName) {
+          if (firstName && lastName) {
+            validGuest = guestList.filter((guest) => {
+              let response = false;
+              let possibleFirstNames = [];
+              let possibleLastNames = [];
+              if (guest.differLastNames) {
+                possibleFirstNames.push(guest.firstName.toUpperCase());
+                possibleFirstNames.push(guest.firstName2.toUpperCase());
+                possibleLastNames.push(guest.lastName.toUpperCase());
+                possibleLastNames.push(guest.lastName2.toUpperCase());
+              } else {
+                possibleFirstNames = guest.firstName.split("&").map((name) => name.trim().toUpperCase());
+                possibleLastNames.push(guest.lastName.toUpperCase());
+              }
+              if (possibleFirstNames.includes(firstName) && possibleLastNames.includes(lastName)) {
+                const rsvpResp = $("#rsvpResponse > .active")[0].dataset.value;
+                if (rsvpResp && guest.maxGuests > 1) {
+                  $("#additionalGuests").show();
+                }
+                return true;
+              }
+              return false;
+            })[0];
+
+            document.cookie = `maxGuests=${validGuest.maxGuests}; expires=Sun, 1 Jan 2023 00:00:00 UTC; path=/`;
+          } else {
+            $("#additionalGuests").hide();
+          }
+        }
+
+        function getRsvpGuestsNames() {
+          let attending = [];
+          let attendeeNames;
+
+          listOfAttendingHtml = $("#guest_list")[0].children;
+          console.log("list elems", listOfAttendingHtml);
+
+          [...listOfAttendingHtml].forEach((nameElem) => {
+            attending.push(nameElem.firstElementChild.value);
+          });
+
+          return attending;
+        }
+
+        $("#submitRsvp").click(function () {
+          console.log("valid guest on submit?", validGuest);
+          const message = $("#rsvpMessage").val();
+          const firstName = $("#firstName").val().toUpperCase();
+          const lastName = $("#lastName").val().toUpperCase();
+
+          if (!message) {
+            Swal.fire({
+              icon: "error",
+              title: "<h1>Missing Food Preferences</h1>",
+              html: `<p style="font-size: 1.5em">You have not listed your pizza preferences or dietary restrictions. You must do this in order to submit your RSVP to Rachael and Luke.</p>`,
+              width: "40%",
+            });
+          } else if (validGuest) {
+            const rsvpResp = $("#rsvpResponse > .active")[0].dataset.value;
+            let totalAttending = 0;
+
+            if (rsvpResp) {
+              totalAttending = $("#guest_list")[0].childElementCount + 1;
+              attendeeNames = getRsvpGuestsNames();
+            }
+
+            attendeeNames.push(`${firstName.capitalize()}`);
+
+            validGuest = {
+              numberAttending: totalAttending,
+              rsvpResponse: rsvpResp,
+              message: message,
+              subject: `${validGuest.firstName} ${validGuest.lastName}`.replace("&", "and"),
+              additionalGuests: attendeeNames.join(", "),
+            };
+
+            console.log("final info to send in email:", validGuest);
+            //TODO: send email with valid guest variable here and SWAL to UI!!
+            sendRsvpToEmail(validGuest);
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "<h1>Invalid Guest</h1>",
+              html: `<p style="font-size: 1.5em">It appears that you are not a guest for this wedding. If you feel this is in error, please contact Rachael or Luke.</p>`,
+              width: "40%",
+            });
+          }
+        });
+
+        String.prototype.capitalize = function () {
+          let lowercaseStr = this.toLowerCase();
+          return lowercaseStr.charAt(0).toUpperCase() + lowercaseStr.slice(1);
+        };
+
+        function sendRsvpToEmail(rsvpDetails) {
+          console.log("Guest info to email", rsvpDetails);
+
+          emailjs.send("gmail", "template_5g4s2ve", rsvpDetails).then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Your RSVP has successfully been sent to Rachael and Luke!",
+                showConfirmButton: false,
+                timer: 4500,
+                timerProgressBar: true,
+              });
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              Swal.fire({
+                title: "<h1>Uh Oh!</h1>",
+                html:
+                  "<p>We were unable to send your RSVP to Rachael and Luke. Please try again. If the problem persists, please contact Rachael and Luke directly!</p>",
+                icon: "error",
+                confirmButtonText: "OK",
+                width: "50%",
+                footer: `<span>Additional Error Info: ${error.text}</span>`,
+              });
+            }
+          );
+        }
       });
     </script>
   </body>
